@@ -183,17 +183,11 @@ func (cms Store) Copy() types.CacheMultiStore {
 		}
 	}
 
-	// Deep copy the keys map
-	newKeys := make(map[string]types.StoreKey, len(cms.keys))
-	for key, value := range cms.keys {
-		newKeys[key] = value
-	}
-
 	// Create new Store with copied values
 	newStore := Store{
 		db:           newDB,
 		stores:       newStores,
-		keys:         newKeys,
+		keys:         cms.keys,
 		traceWriter:  cms.traceWriter,
 		traceContext: cms.traceContext,
 	}
