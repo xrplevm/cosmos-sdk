@@ -172,7 +172,7 @@ func (cms Store) GetKVStore(key types.StoreKey) types.KVStore {
 // Copy creates a deep copy of the Store object
 func (cms Store) Copy() types.CacheMultiStore {
 	// Deep copy the db field
-	newDB := cms.db.(*cachekv.Store).Copy()
+	newDB := cms.db.Copy()
 
 	// Deep copy the cachekv stores map
 	newStores := make(map[types.StoreKey]types.CacheWrap, len(cms.stores))

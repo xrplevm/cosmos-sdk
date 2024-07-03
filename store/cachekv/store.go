@@ -172,7 +172,7 @@ func (store *Store) CacheWrapWithTrace(w io.Writer, tc types.TraceContext) types
 }
 
 // Copy creates a deep copy of the Store object
-func (store *Store) Copy() *Store {
+func (store *Store) Copy() types.CacheKVStore {
 	store.mtx.Lock()
 	defer store.mtx.Unlock()
 
