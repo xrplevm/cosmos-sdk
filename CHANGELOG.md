@@ -36,9 +36,11 @@ Ref: https://keepachangelog.com/en/1.0.0/
 
 # Changelog
 
-## Unreleased
+## [v0.50.8-evmos.2](https://github.com/evmos/cosmos-sdk/releases/tag/v0.50.8-evmos.2) - 2024-08-06
 
-* (baseapp) [#??](https://github.com/evmos/cosmos-sdk/pull/??) Add a getter function for the `StreamManager`.
+### Improvements
+
+* (baseapp) [#53](https://github.com/evmos/cosmos-sdk/pull/53) Add a getter function for the `StreamManager` (required for VersionDB wiring).
 
 ## [v0.50.8-evmos](https://github.com/evmos/cosmos-sdk/releases/tag/v0.50.8-evmos) - 2024-07-18
 
@@ -56,17 +58,17 @@ Ref: https://keepachangelog.com/en/1.0.0/
 
 ## [v0.50.8](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.50.8) - 2024-07-15
 
-## Features
+### Features
 
 * (client) [#20690](https://github.com/cosmos/cosmos-sdk/pull/20690) Import mnemonic from file
 
-## Improvements
+### Improvements
 
 * (x/authz,x/feegrant) [#20590](https://github.com/cosmos/cosmos-sdk/pull/20590) Provide updated keeper in depinject for authz and feegrant modules.
 * [#20631](https://github.com/cosmos/cosmos-sdk/pull/20631) Fix json parsing in the wait-tx command.
 * (x/auth) [#20438](https://github.com/cosmos/cosmos-sdk/pull/20438) Add `--skip-signature-verification` flag to multisign command to allow nested multisigs.
 
-## Bug Fixes
+### Bug Fixes
 
 * (simulation) [#17911](https://github.com/cosmos/cosmos-sdk/pull/17911) Fix all problems with executing command `make test-sim-custom-genesis-fast` for simulation test.
 * (simulation) [#18196](https://github.com/cosmos/cosmos-sdk/pull/18196) Fix the problem of `validator set is empty after InitGenesis` in simulation test.
