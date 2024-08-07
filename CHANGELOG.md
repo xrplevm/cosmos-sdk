@@ -36,15 +36,7 @@ Ref: https://keepachangelog.com/en/1.0.0/
 
 # Changelog
 
-## [v0.50.8-evmos.2](https://github.com/evmos/cosmos-sdk/releases/tag/v0.50.8-evmos.2) - 2024-08-06
-
-### Improvements
-
-* (baseapp) [#53](https://github.com/evmos/cosmos-sdk/pull/53) Add a getter function for the `StreamManager` (required for VersionDB wiring).
-
-## [v0.50.8-evmos](https://github.com/evmos/cosmos-sdk/releases/tag/v0.50.8-evmos) - 2024-07-18
-
-* (cache-store) [#52](https://github.com/evmos/cosmos-sdk/pull/52) Add a deep copy method for the store.
+## [v0.50.9-evmos](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.50.9-evmos) - 2024-08-07
 
 ## [v0.50.9](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.50.9) - 2024-08-07
 
@@ -55,6 +47,16 @@ Ref: https://keepachangelog.com/en/1.0.0/
 * (client/grpc) [#20969](https://github.com/cosmos/cosmos-sdk/pull/20969) Fix `node.NewQueryServer` method not setting `cfg`.
 * (testutil/integration) [#21006](https://github.com/cosmos/cosmos-sdk/pull/21006) Fix `NewIntegrationApp` method not writing default genesis to state.
 * (runtime) [#21080](https://github.com/cosmos/cosmos-sdk/pull/21080) Fix `app.yaml` / `app.json` incompatibility with `depinject v1.0.0`.
+
+## [v0.50.8-evmos.2](https://github.com/evmos/cosmos-sdk/releases/tag/v0.50.8-evmos.2) - 2024-08-06
+
+### Improvements
+
+* (baseapp) [#53](https://github.com/evmos/cosmos-sdk/pull/53) Add a getter function for the `StreamManager` (required for VersionDB wiring).
+
+## [v0.50.8-evmos](https://github.com/evmos/cosmos-sdk/releases/tag/v0.50.8-evmos) - 2024-07-18
+
+* (cache-store) [#52](https://github.com/evmos/cosmos-sdk/pull/52) Add a deep copy method for the store.
 
 ## [v0.50.8](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.50.8) - 2024-07-15
 
