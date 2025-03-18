@@ -321,7 +321,8 @@ func TestHandleAlreadyJailed(t *testing.T) {
 	assert.Equal(t, stakingtypes.Unbonding, validator.GetStatus())
 
 	// validator should have been slashed
-	resultingTokens := amt.Sub(f.stakingKeeper.TokensFromConsensusPower(f.ctx, 1))
+	// NOTE: IF-FINDING-002 Assert that slashed fraction downtime is 0
+	resultingTokens := amt.Sub(f.stakingKeeper.TokensFromConsensusPower(f.ctx, 0))
 	assert.DeepEqual(t, resultingTokens, validator.GetTokens())
 
 	// another block missed
