@@ -125,6 +125,7 @@ func validateSlashFractionDoubleSign(i interface{}) error {
 		return fmt.Errorf("double sign slash fraction too large: %s", v)
 	}
 
+	// NOTE: IF-FINDING-002 Assert that the double sign slash fraction is zero
 	if !v.IsZero() {
 		return fmt.Errorf("double sign slash fraction must be zero: %s", v)
 	}
@@ -148,6 +149,7 @@ func validateSlashFractionDowntime(i interface{}) error {
 		return fmt.Errorf("downtime slash fraction too large: %s", v)
 	}
 
+	// NOTE: IF-FINDING-002 Assert that the downtime slash fraction is zero
 	if !v.IsZero() {
 		return fmt.Errorf("downtime sign slash fraction must be zero: %s", v)
 	}
