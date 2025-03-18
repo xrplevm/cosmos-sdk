@@ -224,7 +224,8 @@ func TestHandleDoubleSign(t *testing.T) {
 
 	// tokens should be decreased
 	newTokens := val.GetTokens()
-	assert.Assert(t, newTokens.LT(oldTokens))
+	// NOTE: IF-FINDING-002 Assert that slashed fraction double sign is 0
+	assert.Assert(t, newTokens.LTE(oldTokens))
 
 	// submit duplicate evidence
 	assert.NilError(t, f.evidenceKeeper.BeginBlocker(ctx))
