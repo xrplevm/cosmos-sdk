@@ -36,6 +36,14 @@ Ref: https://keepachangelog.com/en/1.0.0/
 
 # Changelog
 
+## [Unreleased]
+
+### Bug Fixes
+
+* (x/slashing) [#1](https://github.com/xrplevm/cosmos-sdk/pull/1) [IF-FINDING-002] Slashing parameters can be modified to unexpected values
+
+## [v0.50.11-evmos](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.50.11-evmos) - 2025-01-21
+
 ## [v0.50.9-evmos](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.50.9-evmos) - 2024-08-07
 
 
