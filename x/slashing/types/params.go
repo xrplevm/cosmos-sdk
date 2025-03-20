@@ -127,7 +127,7 @@ func validateSlashFractionDoubleSign(i interface{}) error {
 
 	// NOTE: IF-FINDING-002 Assert that the double sign slash fraction is zero
 	if !v.IsZero() {
-		return fmt.Errorf("double sign slash fraction must be zero: %s", v)
+		return fmt.Errorf("slash fraction double sign must be zero: %s", v)
 	}
 
 	return nil
@@ -151,7 +151,7 @@ func validateSlashFractionDowntime(i interface{}) error {
 
 	// NOTE: IF-FINDING-002 Assert that the downtime slash fraction is zero
 	if !v.IsZero() {
-		return fmt.Errorf("downtime sign slash fraction must be zero: %s", v)
+		return fmt.Errorf("slash fraction downtime must be zero: %s", v)
 	}
 
 	return nil

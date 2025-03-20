@@ -36,6 +36,14 @@ Ref: https://keepachangelog.com/en/1.0.0/
 
 # Changelog
 
+## [v0.50.13-xrplevm.2](https://github.com/xrplevm/cosmos-sdk/releases/tag/v0.50.13-xrplevm.2)
+
+### Bug Fixes
+
+* (x/slashing) [#2](https://github.com/xrplevm/cosmos-sdk/pull/2) Validate slashing parameters in genesis
+
+## [v0.50.13-xrplevm.1](https://github.com/xrplevm/cosmos-sdk/releases/tag/v0.50.13-xrplevm.1)
+
 ## [v0.50.11-xrplevm.1](https://github.com/xrplevm/cosmos-sdk/releases/tag/v0.50.11-xrplevm.1)
 
 ### Bug Fixes

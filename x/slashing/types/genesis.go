@@ -41,10 +41,18 @@ func ValidateGenesis(data GenesisState) error {
 	if downtime.IsNegative() || downtime.GT(math.LegacyOneDec()) {
 		return fmt.Errorf("slashing fraction downtime should be less than or equal to one and greater than zero, is %s", downtime.String())
 	}
+	// NOTE: IF-FINDING-002 Assert that the downtime slash fraction is zero
+	if !downtime.IsZero() {
+		return fmt.Errorf("slash fraction downtime must be zero: %s", downtime)
+	}
 
 	dblSign := data.Params.SlashFractionDoubleSign
 	if dblSign.IsNegative() || dblSign.GT(math.LegacyOneDec()) {
 		return fmt.Errorf("slashing fraction double sign should be less than or equal to one and greater than zero, is %s", dblSign.String())
+	}
+	// NOTE: IF-FINDING-002 Assert that the double sign slash fraction is zero
+	if !dblSign.IsZero() {
+		return fmt.Errorf("slash fraction double sign must be zero: %s", downtime)
 	}
 
 	minSign := data.Params.MinSignedPerWindow
