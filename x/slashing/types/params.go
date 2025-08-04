@@ -15,8 +15,8 @@ const (
 
 var (
 	DefaultMinSignedPerWindow      = math.LegacyNewDecWithPrec(5, 1)
-	DefaultSlashFractionDoubleSign = math.LegacyNewDec(1).Quo(math.LegacyNewDec(20))
-	DefaultSlashFractionDowntime   = math.LegacyNewDec(1).Quo(math.LegacyNewDec(100))
+	DefaultSlashFractionDoubleSign = math.LegacyNewDec(0)
+	DefaultSlashFractionDowntime   = math.LegacyNewDec(0)
 )
 
 // NewParams creates a new Params object
@@ -124,6 +124,10 @@ func validateSlashFractionDoubleSign(i any) error {
 	if v.GT(math.LegacyOneDec()) {
 		return fmt.Errorf("double sign slash fraction too large: %s", v)
 	}
+	// NOTE: IF-FINDING-002 Assert that the double sign slash fraction is zero
+	if !v.IsZero() {
+		return fmt.Errorf("slash fraction double sign must be zero: %s", v)
+	}
 
 	return nil
 }
@@ -142,6 +146,10 @@ func validateSlashFractionDowntime(i any) error {
 	}
 	if v.GT(math.LegacyOneDec()) {
 		return fmt.Errorf("downtime slash fraction too large: %s", v)
+	}
+	// NOTE: IF-FINDING-002 Assert that the downtime slash fraction is zero
+	if !v.IsZero() {
+		return fmt.Errorf("slash fraction downtime sign must be zero: %s", v)
 	}
 
 	return nil
