@@ -149,7 +149,7 @@ func validateSlashFractionDowntime(i any) error {
 	}
 	// NOTE: IF-FINDING-002 Assert that the downtime slash fraction is zero
 	if !v.IsZero() {
-		return fmt.Errorf("slash fraction downtime sign must be zero: %s", v)
+		return fmt.Errorf("slash fraction downtime must be zero: %s", v)
 	}
 
 	return nil
