@@ -74,6 +74,8 @@ Ref: https://keepachangelog.com/en/1.0.0/
 * (types) [#24664](https://github.com/cosmos/cosmos-sdk/pull/24664) Deprecate the `Invariant` type in the Cosmos SDK.
 * [#25516](https://github.com/cosmos/cosmos-sdk/pull/25516) Deprecate all existing methods and types in the `telemetry` package, usage of `github.com/hashicorp/go-metrics` and the `telemetry` configuration section. New instrumentation should use the official [OpenTelemetry go API](https://pkg.go.dev/go.opentelemetry.io/otel) and Cosmos SDK appllications can automatically expose OpenTelemetry metrics, traces and logs via [OpenTelemetry declarative configuration](https://pkg.go.dev/go.opentelemetry.io/contrib/otelconf).
 
+## [v0.53.4-xrplevm.0](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.53.4-xrplevm.0)
+
 ## [v0.53.4](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.53.3) - 2025-07-25
 
 This patch update also includes minor dependency bumps.
