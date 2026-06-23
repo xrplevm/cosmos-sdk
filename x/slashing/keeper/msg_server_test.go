@@ -17,10 +17,12 @@ func (s *KeeperTestSuite) TestUpdateParams() {
 	minSignedPerWindow, err := sdkmath.LegacyNewDecFromStr("0.60")
 	require.NoError(err)
 
-	slashFractionDoubleSign, err := sdkmath.LegacyNewDecFromStr("0.022")
+	// NOTE: IF-FINDING-002 Set slash fraction double sign to default value 0
+	slashFractionDoubleSign, err := sdkmath.LegacyNewDecFromStr("0")
 	require.NoError(err)
 
-	slashFractionDowntime, err := sdkmath.LegacyNewDecFromStr("0.0089")
+	// NOTE: IF-FINDING-002 Set slash fraction downtime to default value 0
+	slashFractionDowntime, err := sdkmath.LegacyNewDecFromStr("0")
 	require.NoError(err)
 
 	invalidVal, err := sdkmath.LegacyNewDecFromStr("-1")
